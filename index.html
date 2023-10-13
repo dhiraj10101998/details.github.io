@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Details</title>
+    <link rel="icon" href="Tap icon.jpeg">
+    <style>
+        @keyframes moveLegend {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+
+        body {
+            background-color: skyblue;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        fieldset {
+            position: relative;
+            border: 2px solid #3333330e;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        legend {
+            position: absolute;
+            animation: moveLegend 3s linear infinite;
+            background-color: #fff;
+            padding: 0 10px;
+            top: -15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="Password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="message.html" target="_blank">
+        <fieldset>
+            <legend><b>Personal Details</b></legend>
+            <br><br>
+
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" required name="fname"><br><br>
+
+            <label for="mname">Middle Name:</label><br>
+            <input type="text" id="mname" name="mname"><br><br>
+
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" required name="lname"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" required id="email" name="email"><br><br>
+
+            <label for="Password">Password:</label><br>
+            <input type="Password" required id="Password" name="conform Password"><br><br>
+
+            <label for="image">Document:</label><br>
+            <input type="file" id="image" name="image" accept="word/pdf"><br><br><br>
+
+            <label for="dob">Date Of Birth:</label><br>
+            <input type="date" required id="dob" name="dob"><br><br>
+
+            <label for="gem">Gender:</label><br>
+
+            <input type="radio" name="gen" id="Male" value="Male">
+            <label for="Male">Male</label>
+            <input type="radio" name="gen" id="Female" value="Female">
+            <label for="Female">Female</label><br><br>
+
+            <label for="cou">Country:</label><br>
+            <input list="coun" name="cou" id="cou"><br><br>
+            <datalist id="coun">
+                <option>INDIA</option>
+                <option>SRI LANKA</option>
+                <option>NEPAL</option>
+            </datalist>
+
+            <label>Interests:</label><br>
+
+            <input type="checkbox" name="Sports" id="Sports">
+            <label for="Sports">Sports</label>
+            <input type="checkbox" name="Music" id="Music">
+            <label for="Music">Music</label>
+            <input type="checkbox" name="Cooking" id="Cooking">
+            <label for="Cooking">Cooking</label>
+            <input type="checkbox" name="Traveling" id="Traveling">
+            <label for="Traveling">Traveling</label>
+            <input type="checkbox" name="Photography" id="Photography">
+            <label for="Photography">Photography</label>
+        </fieldset>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
